@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Country from "./pages/Country";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
+import CountryDetails from "./components/Layout/CountryDetails";
 
 import AppLayout from "./components/Layout/AppLayout";
 
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "country",
         element: <Country />,
+      },
+      {
+        path: "country/:id",
+        element: <CountryDetails />,
       },
       {
         path: "contact",
